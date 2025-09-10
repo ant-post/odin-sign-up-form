@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up form</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <script src="./script.js" defer></script>
+  </head> 
+  <body>
+    <div class="img-container">
+      <div class="logo-container">
+        <img src="./images/odin-lined.png"></img>
+        <span>ODIN</span>
+      </div>
+      <p>Photo by <a href="https://unsplash.com/">Unsplash</a></p>
+    </div>
+    
+    <div class="main-container">
+      <div class="main-text">
+        <p>This is not real online service! You know you need something like this to help you realise your deepest dreams.</p>
+        <p>Sign up <span>now</span> to get started.</p>
+        <p>You <span>know</span> you want to.</p>
+      </div>
+      
+    <div class="main-form">
+      <form action="./submit-form" method="post">
+        <article>Let's do this!</article>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="user-first-name">*FIRST NAME</label>
+            <input id="user-first-name" name="first_name" type="text" placeholder="John" required pattern="^[\p{L}]+(?:[ '\-][\p{L}]+){0,2}\.?$" minlength="2" maxlength="60">
+            <div class="invalid-line">
+              <p class="invalid-message">Invalid value</p>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="user-last-name">*LAST NAME</label>
+            <input id="user-last-name" name="last_name" type="text" placeholder="Deere" required pattern="^[\p{L}]+(?:[ '\-][\p{L}]+){0,2}$" minlength="2" maxlength="60">
+            <div class="invalid-line">
+              <p class="invalid-message">Invalid value</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="user-email">*EMAIL</label>
+            <input id="user-email" name="email" type="text" placeholder="example@ex.com" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+            <div class="invalid-line">
+              <p class="invalid-message">Invalid value</p>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="user-phone-number">PHONE NUMBER</label>
+            <input id="user-phone-number" name="phone_number" type="text" placeholder="XXX XXX XX XX" pattern="^\d{3}[ \-]*\d{3}[ \-]*\d{2}[ \-]*\d{2}[ \-]*$">
+            <div class="invalid-line">
+              <p class="invalid-message">Invalid value</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="user-password-1">*PASSWORD</label>
+            <input id="user-password-1" name="password_1" type="text" placeholder="******" required minlength="6" maxlength="60">
+            <div class="invalid-line">
+              <p class="invalid-message">Invalid value (min 6 symbols)</p>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="user-password-2">*CONFIRM PASSWORD</label>
+            <input id="user-password-2" name="password_2" type="text" placeholder="******" required minlength="6" maxlength="60">
+            <div class="invalid-line">
+              <p class="invalid-message">Passwords do not match</p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+      
+      <div class="main-form-btn-container">
+        <button id="create-account-btn" type="submit">Create Account</button>
+        <p>Already have an account? <a href="">Log in</a></p>
+      </div>
+    </div>
+  </body>
+</html>
